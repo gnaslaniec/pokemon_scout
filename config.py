@@ -5,4 +5,6 @@ POKEMON_LIST = [
     "parasect",
     "aerodactyl",
     "kingler",
+    "gastly",
+    "mew",
 ]

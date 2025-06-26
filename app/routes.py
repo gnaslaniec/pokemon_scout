@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify
 from .database import SessionLocal
 from .models import Pokemon
 from . import pokeapi, processor

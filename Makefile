@@ -1,3 +1,5 @@
+install:
+	@pip install -r requirements.txt
 run:
 	@python app_server.py
 
@@ -6,6 +8,9 @@ run-docker:
 
 build-docker:
 	@docker build -t pokemon-scout .
+
+test:
+	@python -m pytest
 
 clean:
 	@find . -type d -name '__pycache__' -exec rm -rf {} +
