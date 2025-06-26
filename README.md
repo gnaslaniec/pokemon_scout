@@ -102,15 +102,18 @@ Retrieve a Pokémon’s stored data from the local DB.
 - **Returns:**
 ```json
 {
-  "name": "charizard",
-  "types": ["fire", "flying"],
-  "abilities": ["blaze"],
-  "hp": 78,
+  "abilities": "blaze, solar-power",
   "attack": 84,
+  "base_experience": 240,
   "defense": 78,
+  "height": 17,
+  "hp": 78,
+  "name": "charizard",
   "special_attack": 109,
   "special_defense": 85,
-  "speed": 100
+  "speed": 100,
+  "types": "fire, flying",
+  "weight": 905
 }
 ```
 
@@ -154,7 +157,7 @@ Retrieve all Pokémon’s stored on the local DB.
 
 If not found:
 ```json
-{ "error": "charizard not found in database." }
+{ "error": "Pokémon 'missigno' not found" }
 ```
 
 ---
