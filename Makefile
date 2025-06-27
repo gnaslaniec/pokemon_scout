@@ -3,11 +3,13 @@ install:
 run:
 	@python app_server.py
 
-run-docker:
-	@docker run -p 5000:5000 pokemon-scout
-
 build-docker:
 	@docker build -t pokemon-scout .
+
+run-docker:
+	@docker run -p 5000:5000 \
+	-v `pwd`/data/default_pokemons.json:/app/data/default_pokemons.json \
+	pokemon-scout
 
 test:
 	@python -m pytest

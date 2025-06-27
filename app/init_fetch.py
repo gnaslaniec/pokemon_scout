@@ -1,12 +1,12 @@
 from .database import SessionLocal
 from .models import Pokemon
 from . import pokeapi, processor
-from config import POKEMON_LIST
+from config import DEFAULT_POKEMONS
 
 
 def fetch_initial_pokemons():
     session = SessionLocal()
-    for name in POKEMON_LIST:
+    for name in DEFAULT_POKEMONS:
         name = name.lower()
         if session.query(Pokemon).filter_by(name=name).first():
             continue
