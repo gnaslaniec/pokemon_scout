@@ -9,7 +9,6 @@ A lightweight Flask-based scouting tool that fetches Pokémon data from the [Pok
 - Store results in a local SQLite database using SQLAlchemy
 - REST API with Flask to trigger scouting and fetch stored Pokémon
 - Supports initial list and dynamic additions via POST
-- Dockerized and fully testable
 
 ## Main Libraries Used
 
@@ -51,17 +50,6 @@ make run
 ```
 
 App runs on `http://localhost:5000`
-
----
-
-## Docker
-
-To run in Docker:
-
-```bash
-make build-docker
-make run-docker
-```
 
 ---
 
@@ -170,9 +158,4 @@ You can dynamically scout any new Pokémon using the POST endpoint:
 curl -X POST http://localhost:5000/scout/gengar
 ```
 
-Alternatively, you can add a Pokémon to the default scouting list located in config.py. These Pokémon are automatically fetched and stored in the database when the application initializes.
-
-```python
-# config.py
-POKEMON_LIST = ["pikachu", "charizard", "gengar", "newpokemon"]
-```
+Alternatively, you can add a Pokémon to the default scouting list located in data/default_pokemons.json. These Pokémon are automatically fetched and stored in the database when the application initializes.
