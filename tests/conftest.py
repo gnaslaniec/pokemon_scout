@@ -10,7 +10,7 @@ from app.database import Base, engine
 @pytest.fixture(scope="function")
 def client():
     Base.metadata.create_all(bind=engine)
-    app = create_app()
+    app = create_app(testing=True)
 
     with app.test_client() as client:
         yield client
